@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            background-color: rgb(0,62,203);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            border:2px solid red;
+            min-width: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+        .img-outer{
+            background-color: rgb(251,166,27);
+            width:20rem;
+            border-radius:10rem;
+            margin: 2rem 0;
+        }
+        .img{
+            width:20rem;
+            background-color: rgb(0,62,203);
+        }
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+        .name{
+            color: rgb(251,166,27);
+            font-size: 3rem;
+        }
+        .title{
+            color:#fff;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 5rem;
+        }
+        .para p{
+            color:white;
+            line-height: 2;
+            font-size: 1.3rem;
+            letter-spacing: 1.5px;
+        }
+       
+
+        .abilities{
+            margin: 1rem 0;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        .abilities div{
+            border: 2px solid greenyellow;
+            width: 25%;
+            padding: 2rem;
+            border-radius: 50%;
+            background-color:white;
+            font-size: 1.5rem;
+            margin-left: 5px;
+            transition: all .1s linear;
+        }
+        .abilities div:hover{
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 1136px){
+                   .abilities{
+                    display: flex;
+                    flex-direction: column;
+                   }
+                   .abilities div{
+                    width:100%;
+                   }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>HELLO EVERYBODY, I AM</h2>
+        </div>
+        <div class="name">
+            <h1>Lorem Ipsum</h1>
+        </div>
+        <div class="para">
+            <p>
+            I’m a digital designer in love with photography, painting anddiscovering new worlds and cultures. ​Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
+        </div>
+        <div class="img-outer">
+            <div class="img">
+                <img src="https://img.freepik.com/free-photo/portrait-smiling-young-man-eyewear_171337-4842.jpg?size=626&ext=jpg&ga=GA1.1.1697009720.1682930705&semt=sph" alt="">
+            </div>
+        </div>
+
+        <div class="abilities">
+            <div class="resume" style="color: rgb(0,62,203);">Resume</div>
+            <div class="myskill" style="color: rgb(251,166,64);">My skill</div>
+            <div class="projects" style="color: rgb(0,62,203);">Projects</div>
+            <div class="contact" style="color:rgb(251,166,64)">Contacts</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        background: #04d167;
+        background: linear-gradient(135deg, #04d167, #92c3ea);
+      }
+      .container {
+        width: 50%;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+          rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+          rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      }
+      header p {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        /* padding: 0.5rem; */
+        /* background-color: aqua; */
+      }
+      nav {
+        margin: 2rem 0;
+      }
+      nav ul li {
+        list-style: none;
+        padding: 0.6rem;
+        background-color: gainsboro;
+        border-right: 2px solid #000;
+        flex-basis: 50%;
+        text-align: center;
+        transition: all 1s ease;
+      }
+      li::after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 2px;
+        background-color: yellow;
+        transition: all 1s;
+      }
+      li:hover::after {
+        width: 100%;
+        transition: all 1s ease;
+      }
+      nav ul li a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #474747;
+      }
+      li:last-child {
+        border-right: none;
+      }
+      form {
+        font-size: 1.5rem;
+      }
+
+      .form-area {
+        display: flex;
+        margin: 1rem 0;
+      }
+      .form-area input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid;
+      }
+      .form-area div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .form-area div input {
+        display: inline-block;
+        width: 100%;
+        padding: 1rem;
+      }
+      .form-area div:first-child {
+        margin-right: 2rem;
+      }
+      #email {
+        display: block;
+        border: none;
+        border-bottom: 1px solid #000;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn input {
+        flex-basis: 020%;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+        color: #fff;
+        outline: none;
+        border: none;
+        padding: 1rem;
+        background: #6285d6;
+        background: linear-gradient(135deg, #6285d6, #1454a8);
+        transition: all 0.1s ease;
+      }
+      .btn input:hover{
+        transform: scale(1.1);
+      }
+
+      input:focus {
+        outline: none;
+        color: brown;
+      }
+
+      @media (max-width: 914px){
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                }
+                ul li{
+                    border-right: none;
+                    border-bottom: 1px solid ;
+                }
+                 .form-area{
+                    display: flex;
+                    flex-direction: column;
+                 }
+                 .form-area div{
+                    width: 100%;
+                 }
+                 header{
+                    font-size: 1rem;
+                    margin-bottom: 2px;
+                 }
+                 form{
+                    width: 100%;
+                 }
+
+      }
+      @media (max-width: 813px){
+        .container{
+           max-height: 130vh;
+           max-width: 60vw;
+
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <header>
+        <h1>Sign Up</h1>
+        <p>Let's create your account.</p>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#container">Account</a></li>
+          <li><a href="./personalinfo.html">Personal Info</a></li>
+          <li><a href="./paymentdetails.html">Payment Detail</a></li>
+        </ul>
+      </nav>
+      <form action="">
+        <p>Enter your details below.</p>
+        <div class="form-area">
+          <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" />
+          </div>
+          <div>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" />
+          </div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="form-area">
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div>
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+            />
+          </div>
+        </div>
+        <div class="btn">
+          <input type="button" value="Next" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
